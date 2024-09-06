@@ -1,2 +1,2 @@
-import"./assets/styles-Co3rb4m7.js";console.log("Form");
+import"./assets/styles-DvgaTutA.js";let e={email:"",message:""};const a=document.querySelector(".feedback-form"),s=a.querySelector('input[name="email"]'),l=a.querySelector('textarea[name="message"]'),r=localStorage.getItem("feedback-form-state");r&&(e=JSON.parse(r),s.value=e.email,l.value=e.message);a.addEventListener("input",t=>{e[t.target.name]=t.target.value,localStorage.setItem("feedback-form-state",JSON.stringify(e))});a.addEventListener("submit",t=>{if(t.preventDefault(),!e.email||!e.message){alert("Fill please all fields");return}console.log(e),localStorage.removeItem("feedback-form-state"),e={email:"",message:""},a.reset()});
 //# sourceMappingURL=2-form.js.map
