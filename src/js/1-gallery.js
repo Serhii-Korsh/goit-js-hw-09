@@ -1,8 +1,6 @@
-// Import the SimpleLightbox library and its CSS styles
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-// Array of images
 const images = [
   {
     preview:
@@ -69,10 +67,8 @@ const images = [
   },
 ];
 
-// Select the gallery element
 const gallery = document.querySelector('.gallery');
 
-// Create gallery items markup
 const galleryItems = images.map(({ preview, original, description }) => {
   return `
     <li class="gallery-item">
@@ -87,15 +83,13 @@ const galleryItems = images.map(({ preview, original, description }) => {
   `;
 }).join('');
 
-// Insert the gallery items into the DOM
 gallery.insertAdjacentHTML('beforeend', galleryItems);
 
-// Initialize SimpleLightbox with options for captions and delay
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
-  captionsData: 'alt',  // Get captions from the alt attribute
-  captionPosition: 'bottom',  // Position captions at the bottom
-  captionDelay: 250,  // Set caption appearance delay to 250ms
+  captionsData: 'alt',  
+  captionPosition: 'bottom',  
+  captionDelay: 250,  
   widthRatio: 0.9,
     heightRatio: 0.9,
   fadeSpeed: 200,
